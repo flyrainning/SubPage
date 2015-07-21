@@ -60,23 +60,7 @@ subpage_css('css.css');
 subpage_css('buttons.min.css');
 subpage_js('func.js');
 
-//调整评论区显示样式
-/*
-add_filter('comment_form_defaults', 'subpage_reset_comment',100);
-function subpage_reset_comment($com){
 
-	$com['comment_notes_before']='';
-	$com['comment_notes_after']='';
-	$com['title_reply'] = '我要留言';
-	$com['title_reply_to'] ='';
-	$com['cancel_reply_link']='';
-	$com['label_submit']='提交';
-	$com['comment_field']=str_replace('评论','留言',$com['comment_field']);
-	$com['fields']['url']='';
-
-	return $com;
-}
-*/
 include_once dirname( __FILE__ ) . '/subpage_super_widget.php';
 add_action( 'widgets_init','subpage_set_superwidget' );
 function subpage_set_superwidget(){
