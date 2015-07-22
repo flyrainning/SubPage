@@ -7,9 +7,10 @@ Version: 0.8
 Author: flyrainning
 Author URI: http://www.fengpiao.xyz
 */
+$subpage_template=ABSPATH.'page/index.php';
 
-require ABSPATH.'core/core_mini.php';
-require ABSPATH.'inc/main_inc.php';
+if (file_exists(ABSPATH.'core/core.php')) require ABSPATH.'core/core.php';
+
 
 function subpage_get_page_hash(){
 	$_vpn_page_hash='';
@@ -48,7 +49,7 @@ function subpage_template($template){
 	
 	$_page_h=subpage_get_page_hash();
 	if (!empty($_page_h)){
-		$template =ABSPATH.'page/index.php';
+		$template =$subpage_template;
 		
 		
 	}
@@ -56,9 +57,7 @@ function subpage_template($template){
 	 
 	return $template;
 }
-subpage_css('css.css');
-subpage_css('buttons.min.css');
-subpage_js('func.js');
+
 
 
 include_once dirname( __FILE__ ) . '/subpage_super_widget.php';
@@ -76,7 +75,7 @@ register_sidebar(array(
   'after_title' => '</h1>'
 ));
 
-add_action('init','start_session');
+//add_action('init','start_session');
 
 
 ?>

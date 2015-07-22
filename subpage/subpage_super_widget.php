@@ -1,15 +1,15 @@
 <?php
-class sssvpn_super_widget extends WP_Widget {
+class subpage_super_widget extends WP_Widget {
  
 /**
 	 * 注册一个WordPress小工具
 	 */
 	public function __construct() {
 		parent::__construct(
-	 		'sssvpn_super_widget', // 基本 ID
-			'sssvpn_super_widget', // 名称
+	 		'subpage_super_widget', // 基本 ID
+			'subpage_super_widget', // 名称
 			array( 
-				'description' =>'sssvpn小工具框架',
+				'description' =>'subpage小工具框架',
 
 			),
 			array(
@@ -39,8 +39,8 @@ class sssvpn_super_widget extends WP_Widget {
 		if ( ! empty( $caption ) ) echo $before_title . $caption . $after_title;
 		
 		//正式代码
-			if (!defined('SSSVPN_WIDGET')){
-				define('SSSVPN_WIDGET',true);
+			if (!defined('SUBPAGE_WIDGET')){
+				define('SUBPAGE_WIDGET',true);
 			}
 			
 			$config=trim($config);
@@ -49,9 +49,9 @@ class sssvpn_super_widget extends WP_Widget {
 				eval($config);
 			}
 			if (!empty($title)){
-				$_sssvpn_widget_inc_file_=ABSPATH.'widget/'.$title.'.php';
-				if (file_exists($_sssvpn_widget_inc_file_)){
-					require $_sssvpn_widget_inc_file_;
+				$_subpage_widget_inc_file_=ABSPATH.'widget/'.$title.'.php';
+				if (file_exists($_subpage_widget_inc_file_)){
+					require $_subpage_widget_inc_file_;
 				}
 			}
 		//
