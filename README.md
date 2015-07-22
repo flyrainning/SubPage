@@ -6,9 +6,9 @@ wordpress插件，可方便的在任何现有主题模板基础上扩展自定�
 
 ##安装
 
-1、将subpage目录复制到WP的插件目录（wp-content/plugins/）。这是插件主体
-2、将WP_ROOT目录下的文件复制到WP根目录，这是扩展出的示例框架，你可以在此基础上编写自己的代码，也可以删除，自行编写所需页面处理罗辑。
-3、登录WP后台，在插件中启用subpage扩展。
+1. 将subpage目录复制到WP的插件目录（wp-content/plugins/）。这是插件主体
+2. 将WP_ROOT目录下的文件复制到WP根目录，这是扩展出的示例框架，你可以在此基础上编写自己的代码，也可以删除，自行编写所需页面处理罗辑。
+3. 登录WP后台，在插件中启用subpage扩展。
 
 
 ##使用
@@ -58,7 +58,7 @@ subpage_js('xxx.js');
 
 ###api
 
-api文件夹功能相对独立，删除不影响其他功能，此目录提供了一个ajax访问的统一接口。使用ajax访问http://yourwebsite.com/api/?api=user.login，即可执行api/user/login.php的代码，并将结果通过apiout函数返回给浏览器，apiout返回格式化后的json数据，并且调用后停止页面执行。可以自行参照api目录中的示例。
+api文件夹功能相对独立，删除不影响其他功能，此目录提供了一个ajax访问的统一接口。使用ajax访问`http://yourwebsite.com/api/?api=user.login`，即可执行`api/user/login.php`的代码，并将结果通过apiout函数返回给浏览器，apiout返回格式化后的json数据，并且调用后停止页面执行。可以自行参照api目录中的示例。
 
 ###调用WP内容
 
