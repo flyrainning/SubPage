@@ -13,17 +13,17 @@ if (file_exists(ABSPATH.'core/core.php')) require ABSPATH.'core/core.php';
 
 
 function subpage_get_page_hash(){
-	$_vpn_page_hash='';
+	$_subpage_page_hash='';
 	foreach ($_GET as $k => $v) {
 		if (empty($v)){
 			$k=strtr($k,array('_' => '.'));
 			if (strpos($k,'.')>0){
-				$_vpn_page_hash=$k;
+				$_subpage_page_hash=$k;
 			}
 
 		}
 	}
-	return $_vpn_page_hash;
+	return $_subpage_page_hash;
 }
 function subpage_css($file){
 	$t=rand(10000,99999);
