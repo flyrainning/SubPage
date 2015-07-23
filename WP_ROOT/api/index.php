@@ -1,6 +1,6 @@
 <?php
 
-if (!defined('FPAPI')){
+if (!defined('SUBPAGE')){
 	require '../core/core.php';
 }
 
