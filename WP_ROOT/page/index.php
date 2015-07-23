@@ -12,7 +12,7 @@ define('SUBPAGE_PAGE',true);
 ob_start();
 get_header();
 
-$sv_cmd=sssvpn_get_page_hash();
+$sv_cmd=subpag_get_page_hash();
 
 if (!empty($sv_cmd)){
 	
